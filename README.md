@@ -1,6 +1,6 @@
 # Minecraft Bedrock Discord Bot
 
-Discord bot plugin for Minecraft bedrock edition.
+Discord bot plugin for Minecraft bedrock edition on Docker.
 
 ## Overview
 
@@ -23,6 +23,19 @@ I built a Minecraft bedrock edition server with Docker, but there was no proper 
 
 - Get Discord token at developer site, and edit `bot_config.py`
 - Edit `MC_LOG` at `login_check.sh` : enter path of your minecraft log file.
+  - Check path of container's log file.
+  
+  ```(text)
+  $ docker inspect <container_name> | grep 'LogPath'
+  ```
+
+- It is recommended that you add the following entry in visudo.
+
+  ```(text)
+  $ sudo visudo
+
+  <your_user_name>  ALL=NOPASSWD:  /bin/tail
+  ```
 
 ## How to use
 
