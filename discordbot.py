@@ -12,6 +12,14 @@ CHANNEL_ID = bot_config.DISCORD_CHANNEL_ID
 
 client = discord.Client()
 
+async def server_info_send(command, send_title):
+    result = subprocess.check_output(command,shell=True)
+    send_data = result.decode().strip().split('\n')
+    channel = client.get_channel(int(CHANNEL_ID))
+    await channel.send(send_title)
+    for i in range(len(send_data)):
+        await channel.send(send_data[i])
+
 @client.event
 async def on_ready():
     print('Logged in done.')
@@ -22,6 +30,10 @@ async def on_message(message):
         return
     if message.content == '/test':
         await message.channel.send('test message')
+    if message.content == '/df':
+        await server_info_send("df -h | grep /dev/vda3", "[Server Info] ストレージ空き領域")
+    if message.content == '/free':
+        await server_info_send("free -m", "[Server Info] 空きメモリ")
 
 @tasks.loop(seconds=1)
 async def loop():

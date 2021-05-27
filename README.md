@@ -11,6 +11,8 @@ I built a Minecraft bedrock edition server with Docker, but there was no proper 
 
 ![mcdbot00](https://kosukelab.com/share/minecraft-discord-bot.png)
 
+- [develop] Added the ability to check free storage space and free memory space.
+
 ## Preparation
 
 - Require Python 3.5.3 or higher
