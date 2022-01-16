@@ -31,9 +31,9 @@ async def on_message(message):
     if message.content == '/test':
         await message.channel.send('test message')
     if message.content == '/df':
-        await server_info_send("df -h | grep /dev/vda3", "[Server Info] ストレージ空き領域")
+        await server_info_send("df -h | grep /dev/vda3", "[Server Info] ストレージ情報")
     if message.content == '/free':
-        await server_info_send("free -m", "[Server Info] 空きメモリ")
+        await server_info_send("free -m", "[Server Info] メモリ情報")
 
 @tasks.loop(seconds=1)
 async def loop():
