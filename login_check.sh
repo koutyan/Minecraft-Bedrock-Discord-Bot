@@ -18,7 +18,7 @@ if [ -n "$diff_result" ]; then
   cat $LOG_FILE | while read line
   do
     if [[ $line =~ "connected" ]]; then
-      cat $LOG_FILE | awk -F'[:,]' '{print $2,$3}' | awk -F'[]]' '{print $2}' > $OUTPUT_FILE
+      cat $LOG_FILE | awk -F'[:,]' '{print $5,$6}' | awk -F'[]]' '{print $2}' > $OUTPUT_FILE
     fi
   done
   cp $LOG_FILE $LOG_BAK_FILE
