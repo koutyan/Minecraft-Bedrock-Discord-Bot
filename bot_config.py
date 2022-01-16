@@ -5,5 +5,5 @@
 DISCORD_TOKEN=''
 DISCORD_CHANNEL_ID=0000000000000000
 
-# Enter your minecraft container id.
+# Enter your minecraft container full id.
 CONTAINER_ID=''
