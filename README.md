@@ -26,7 +26,11 @@ I built a Minecraft bedrock edition server with Docker, but there was no proper 
 - Edit `bot_config.py`
   - Get Discord token at developer site.
   - Enter your Discord channel id.
-  - Enter your minecraft container id.
+  - Enter your minecraft container full id.
+    - You can search it with below command.
+      ```
+      docker inspect <container_name> | grep Id
+      ```
 
 - Add execute permission to `login_check.sh`
 
