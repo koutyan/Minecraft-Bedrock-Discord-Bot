@@ -3,9 +3,9 @@
 # Created by Koutyan.S (https://tech.kosukelab.com/)
 # This is sub program for creating send messages.
 
-# Enter your minecraft log file. 
-# ex: "/var/lib/docker/containers/hogehoge/hogehoge-json.log"
-MC_LOG="/var/lib/docker/containers/hogehoge/hogehoge-json.log"
+source ./bot_config.py
+
+MC_LOG="/var/lib/docker/containers/${CONTAINER_ID}/${CONTAINER_ID}-json.log"
 
 LOG_FILE="./discordbot.log"
 LOG_BAK_FILE="./discordbot_bak.log"

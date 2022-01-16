@@ -23,12 +23,15 @@ I built a Minecraft bedrock edition server with Docker, but there was no proper 
   $ pip3 install -U "discord.py[voice]"
   ```
 
-- Get Discord token at developer site, and edit `bot_config.py`
-- Edit `MC_LOG` at `login_check.sh` : enter path of your minecraft log file.
-  - Check path of container's log file.
-  
-  ```(text)
-  $ docker inspect <container_name> | grep 'LogPath'
+- Edit `bot_config.py`
+  - Get Discord token at developer site.
+  - Enter your Discord channel id.
+  - Enter your minecraft container id.
+
+- Add execute permission to `login_check.sh`
+
+  ```
+  $ chmod +x login_check.sh
   ```
 
 - It is recommended that you add the following entry in visudo.
