@@ -9,13 +9,14 @@ import bot_config
 
 TOKEN = bot_config.DISCORD_TOKEN
 CHANNEL_ID = bot_config.DISCORD_CHANNEL_ID
+CHANNEL_SERVER_ID = bot_config.DISCORD_SERVER_CHANNEL_ID
 
 client = discord.Client()
 
 async def server_info_send(command, send_title):
     result = subprocess.check_output(command,shell=True)
     send_data = result.decode().strip().split('\n')
-    channel = client.get_channel(int(CHANNEL_ID))
+    channel = client.get_channel(int(CHANNEL_SERVER_ID))
     await channel.send(send_title)
     for i in range(len(send_data)):
         await channel.send(send_data[i])
