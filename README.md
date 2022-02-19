@@ -59,10 +59,3 @@ I built a Minecraft bedrock edition server with Docker, but there was no proper 
   ```
 
 - The bot program will be left running, so detach it with Ctrl+A → D.
-
-## Donate
-
-- Bitcoin (BTC) : `bc1q8662kxljwrk4q70g2vtut75pdzsdj5tmwz78dc`
-- Ethereum (ETH) : `0x7C85446DDCC62D749227cBc55c1FF0D711B59979`
-- Symbol (XYM) : `NCTFRL5RGOAKAW4B3HZLUMEM6YGWI3WRK4V2OKY`
-- Tron (TRX) : `TTv1LJGe3Tg4SVhcKFAYZjnBKiPstQ1Tnp`
